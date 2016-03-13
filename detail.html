@@ -1,95 +1,71 @@
 <!Doctype HTML>
 <html>
     <head>
-        <title>Doggy's detail profile</title>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width"/>
+        <title>Detail profile</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
         
-        <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
-        <link href="foundation-5.5.3/css/foundation.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.css"/>
-        
+
+<!--        <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>-->
+<!--        <link href="foundation-5.5.3/css/foundation.min.css" rel="stylesheet">-->
+<!--        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.css"/>-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+<!--        <link rel="stylesheet" href="css/style.css" type="text/css"/>-->
         <script src="js/detailpage.js" ></script>
-        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css" type="text/css"><!-- Custom styles -->
+
+        <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+        <script src="owl-carousel/owl.carousel.js"></script>
+
     </head>
 
     <body>   
-        <div class="orbit-container">
-        <ul data-orbit class="example-orbit orbit-slides-container">
-        <li>
-        <img id="main_image" src="images/30095.jpg" alt="Slide 1"/>
-<!--        update to the new image after load-->
-        <div class="orbit-caption">
-        Caption One.
+<!--        <image id ="main_image"></image>-->
+        <div class="jumbotron">            
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="owl-carousel" id="owl-demo">
+                  <div align="middle" class="item"> 
+                    <img id ="main_image" src = "images/S__8896542.jpg">
+                    </div>
+                  <div align="middle" class="item">             
+                      <img src = "images/dog_001_png_by_heidyy12-d5ti1g0.png">
+                    </div>
+                  <div class="item"  align="middle"> 
+                        <img src = "images/dog_PNG149.png">
+                    </div>
+                    </div>
         </div>
-            </li>
-        <li class="active">
-          <img src="images/311dca65de1ebda0e8dccae7e2748796.jpg" alt="slide 1" />
-          <div class="orbit-caption">
-            Caption Two.
-          </div>
-        </li>
-        <li>
-          <img src="/images/813.jpg" alt="slide 1" />
-          <div class="orbit-caption">
-            Caption Three.
-          </div>
-        </li>
-        </ul>
-            <!-- Navigation Arrows -->
-          <a href="#" class="orbit-prev">Prev <span></span></a>
-          <a href="#" class="orbit-next">Next <span></span></a>
-
-          <!-- Slide Numbers -->
-          <div class="orbit-slide-number">
-            <span>1</span> of <span>3</span>
-          </div>
-
-          <!-- Timer and Play/Pause Button -->
-          <div class="orbit-timer">
-            <span></span>
-            <div class="orbit-progress"></div>
-          </div>
         </div>
-        <!-- Bullets -->
-        <ol class="orbit-bullets">
-          <li data-orbit-slide-number="1"></li>
-          <li data-orbit-slide-number="2" class="active"></li>
-          <li data-orbit-slide-number="3"></li>
-        </ol>
-        
-        <br>
-        <ul class="example-orbit-content" data-orbit>
-          <li data-orbit-slide="headline-1">
-            <div>
-              <h2>Headline 1</h2>
-              <h3>Subheadline</h3>
+        </div>
+        </div>
+        <div class="container" id="descriptionBG">
+        <div class="row" >
+            <div class="col-lg-8  col-md-offset-2">
+            <h1  align="middle"  id ="name">The story of </h1>
             </div>
-          </li>
-          <li data-orbit-slide="headline-2">
-            <div>
-              <h2>Headline 2</h2>
-              <h3>Subheadline</h3>
+        </div>
+            <div class="row" >
+                <p id="detailContent"></p>
             </div>
-          </li>
-          <li data-orbit-slide="headline-3">
-            <div>
-              <h2>Headline 3</h2>
-              <h3>Subheadline</h3>
-            </div>
-          </li>
-        </ul>
-        
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; 2015, Suzy</p>
-                </div>
-            </div>
+        </div>
+        <footer>    
+            <p>Copyright &copy; 2016, Suzy</p>
         </footer>    
-            <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min.js"></script>
+<!--            <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min.js"></script>-->
+        <script>
+        $(document).ready(function() {
+            $("#owl-demo").owlCarousel({
+                items : 1
+//            ,navigation : true
 
+            });
+        });
+        </script>
     </body>
 </html>

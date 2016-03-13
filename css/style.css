@@ -1,3 +1,17 @@
+
+#owl-demo .item{
+/*  margin: 3px;*/
+}
+#owl-demo .item img{
+  display: block;
+  width: auto;
+  height: 400px;
+}
+#descriptionBG
+{
+    background-image: url(../images/paper-bg.jpg);
+    background-size:100% 100%;
+}
 p{
     font-size: 14px;
 }
