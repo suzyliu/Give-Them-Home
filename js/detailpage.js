@@ -4,6 +4,7 @@ $(document).ready(function(){
     function getparm() 
     { 
         var url=location.href; 
+
 //        var tmp1=url.split("?")[1]; 
 //    var tmp2=tmp1.split("&")[0]; 
 //    var tmp3=tmp2.split("=")[1]; 
@@ -12,38 +13,20 @@ $(document).ready(function(){
 //        alert(main_role); 
     } 
     getparm();
-    
+    var filename = "file:///Users/Suzzie/Development/Give-Them-Home/" + main_role +".text";
     var _img = document.getElementById('main_image');
     
     if (_img) {
-        readTextFile()
         var text = document.getElementById('name');
         text.textContent = text.textContent + main_role;
-    }
-//    detailContent
-    var filename = main_role +".text";
-    readTextFile(filename);
-
-    function readTextFile(file)
-    {
-        var rawFile = new XMLHttpRequest();
-        rawFile.open("GET", file, false);
-        rawFile.onreadystatechange = function ()
-        {
-            if(rawFile.readyState === 4)
-            {
-                if(rawFile.status === 200 || rawFile.status == 0)
-                {
-                    var allText = rawFile.responseText;
-//                    alert(allText);
-                    
-                    var detail = document.getElementById('detailContent');
-                    detail.textContent = allText;
-                }
-            }
+        //_img.src = xxx
+        if(main_role == "Laladog"){
+            alert("Same");
+            //put the content here
+        }else if(main_role == ""){
         }
-        rawFile.send(null);
     }
+   
     function setImageForId(image_id){
        var newImg = new Image;
         newImg.onload = function() {

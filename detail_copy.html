@@ -1,0 +1,62 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <title>Doggy's profile</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <!-- jQuery library (served from Google) -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!--
+         directorySlider Javascript file 
+        <script src="/js/directorySlider.js"></script>
+-->
+        
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        
+<!--        should I keep the same?         -->
+        <script src="js/detailpage.js" ></script>
+        <script>
+        var dir = "../images/";
+        var fileextension = ".jpg";
+        $.ajax({
+            //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+            url: dir,
+            success: function (data) {
+                //Lsit all png file names in the page
+                $(data).find("a:contains(" + fileextension + ")").each(function () {
+                    var filename = this.href.replace(window.location.host, "").replace("file://", "");
+                    $("body").append($("<img src=" + dir + filename + "></img>"));
+                });
+            }
+        });
+        </script>
+<!--
+        <script>
+        $(document).ready(function(){
+          $('.directorySlider').directorySlider();
+        });
+        $('#slider-main').directorySlider({
+            animation: 'fade',
+            filebase: '',
+            directory: 'images/',
+            extension: 'jpg',
+            numslides: 6,
+            height: 200
+        });
+
+        </script>
+-->
+    </head>
+
+    <body>
+<!--        <div class="directorySlider"></div>-->
+        
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; 2015, Suzy</p>
+                </div>
+            </div>
+        </footer>    
+    </body>
+</html>
