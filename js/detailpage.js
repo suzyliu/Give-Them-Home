@@ -14,13 +14,9 @@ $(document).ready(function(){
     getparm();
     
     var _img = document.getElementById('main_image');
+    
     if (_img) {
-        var newImg = new Image;
-        newImg.onload = function() {
-            _img.src = this.src;
-        }
-        newImg.src = "images/"+main_role+".jpg";
-        
+        readTextFile()
         var text = document.getElementById('name');
         text.textContent = text.textContent + main_role;
     }
@@ -47,6 +43,13 @@ $(document).ready(function(){
             }
         }
         rawFile.send(null);
-    }  
+    }
+    function setImageForId(image_id){
+       var newImg = new Image;
+        newImg.onload = function() {
+            _img.src = this.src;
+        }
+        newImg.src = "images/"+image_id+".jpg";
+    }
 });
     

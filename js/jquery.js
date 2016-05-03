@@ -31,7 +31,7 @@ $(document).ready(function(){
     });
     $( "#btn" ).click(function() {
 //      alert( "Sorry, other pages not build yet. lol" );
-        var param = "laladog";
+        var param = "Bebe";
         window.location = "about.html?param="+param;
     });
 });
