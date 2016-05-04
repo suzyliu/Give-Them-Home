@@ -3,9 +3,11 @@
 /*  margin: 3px;*/
 }
 #owl-demo .item img{
-  display: block;
+/*  display: block;*/
   width: auto;
-  height: 400px;
+  max-height: 400px;
+  overflow: auto;
+
 }
 #descriptionBG
 {

@@ -10,29 +10,35 @@ $(document).ready(function(){
 //    var tmp3=tmp2.split("=")[1]; 
 //        var parm1=tmp3;
         main_role = url.split("=")[1];
-//        alert(main_role); 
     } 
     getparm();
-    var filename = "file:///Users/Suzzie/Development/Give-Them-Home/" + main_role +".text";
-    var _img = document.getElementById('main_image');
-    
-    if (_img) {
+    var _imgList = document.getElementById('owl-demo');
+    if (_imgList) {
         var text = document.getElementById('name');
         text.textContent = text.textContent + main_role;
-        //_img.src = xxx
+        
         if(main_role == "Laladog"){
-            alert("Same");
             //put the content here
-        }else if(main_role == ""){
+            var numberOfImages = 2;
+            
+        }else if(main_role == "Honey"){
+            var content = ['From the northen side of Seatle.'];
+            var numberOfImages = 2;
+        }else if(main_role == "mia"){
+            var numberOfImages = 5;
+        }else if(main_role == "MsTiger"){
+            var numberOfImages = 10;
         }
-    }
-   
-    function setImageForId(image_id){
-       var newImg = new Image;
-        newImg.onload = function() {
-            _img.src = this.src;
+        for(i = 0; i < numberOfImages; i++){
+            var div = document.createElement('div');
+            div.setAttribute('class', 'item');
+            
+            var imageBlock = [' <img src = "images/'+main_role+'/'+main_role+(i+1)+ '.jpg">'];
+            div.innerHTML = imageBlock;
+            document.getElementById('owl-demo').appendChild(div);
         }
-        newImg.src = "images/"+image_id+".jpg";
+        document.getElementById('detailContent').textContent = content;
+
     }
 });
     
