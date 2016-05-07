@@ -31,7 +31,8 @@ $(document).ready(function(){
     });
     $( "#btn" ).click(function() {
 //      alert( "Sorry, other pages not build yet. lol" );
-        var param = "Bebe";
-        window.location = "about.html?param="+param;
+//        var param = "Bebe";
+//        window.location = "about.html?param="+param;
+        window.location = "adoptForm.html";
     });
 });

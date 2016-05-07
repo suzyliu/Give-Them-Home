@@ -67,12 +67,10 @@ p{
   margin-left: 1rem;
   font-size: 3rem;
   color: #111;
-
-/*  color: #333;*/
-  transition: all .25s ease-in-out; }
+  transition: all .25s ease-in-out; 
+}
   .left-off-canvas-toggle:focus {
       color: #111;
-/*    color: #333; */
   }
   .left-off-canvas-toggle:hover {
     color: #8c8c8c;
@@ -100,7 +98,6 @@ footer{
 @media (max-width: 568px) { 
 
     .left-off-canvas-menu {
-/*     opacity: 0.1;*/
     }
     
 footer{
